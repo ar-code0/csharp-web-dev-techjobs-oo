@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
-
+using System.Runtime.CompilerServices;
 
 namespace TechJobsOO
 {
@@ -41,7 +40,7 @@ namespace TechJobsOO
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Id, Name, EmployerName, EmployerLocation, JobType, JobCoreCompetency);
+            return HashCode.Combine(Id);
         }
 
         
@@ -75,6 +74,11 @@ namespace TechJobsOO
                     + "Core Competency: " + list[4] + "\n"
                     + "";
             }
+        }
+
+        public static void ResetNextId()
+        {
+            nextId = 1;
         }
     }
 }
